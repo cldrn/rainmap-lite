@@ -15,3 +15,6 @@ Features:
 
 Demo:
 https://youtu.be/3oNegHPBd3o
+
+Screenshots:
+<img style="float:center;width:80%" src="https://github.com/cldrn/rainmap-lite/raw/master/map/rainmap-lite-1.png" />
