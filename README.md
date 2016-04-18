@@ -17,4 +17,7 @@ Demo:
 https://youtu.be/3oNegHPBd3o
 
 Screenshots:
+* Responsive design
 <img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/rainmap-lite-1.png" />
+* Customizable
+<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/screenshots/rainmap-lite-2.png" />
