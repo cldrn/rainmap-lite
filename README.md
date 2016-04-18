@@ -27,10 +27,9 @@ https://youtu.be/3oNegHPBd3o
 <img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/screenshots/rainmap-lite-3.png" />
 * Site Administration allows managements of users, scanning profiles and scans
 <img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/screenshots/rainmap-lite-4.png" />
-<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/rainmap-lite-5.png" />
+<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/screenshots/rainmap-lite-5.png" />
 * Cron based
-<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/rainmap-lite-6.png" />
+<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/screenshots/rainmap-lite-6.png" />
 * Results delivered by email
-<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/rainmap-lite-7.png" />
-<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/screenshots/rainmap-lite-2.png" />
+<img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/screenshots/rainmap-lite-7.png" />
 
