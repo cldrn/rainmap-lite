@@ -1,5 +1,5 @@
 #INSTALLATION
-PREREQUISITES
+#Prerequisites
 - Django (Tested on Django 1.9)
 If you do not have Django installed use: `pip install Django`
 
