@@ -18,6 +18,9 @@ Unlike it's predecessor [1], Rainmap-lite does not require special services (Rab
 ## Demo
 https://youtu.be/3oNegHPBd3o
 
+## Documentation
+You can find all the documentation related to this project on the [Wiki](https://github.com/cldrn/rainmap-lite/wiki/ "Rainmap Lite Documentation")
+
 ## Screenshots
 * Responsive interface
 <img style="float:center;width:80%" src="https://raw.githubusercontent.com/cldrn/rainmap-lite/master/rainmap-lite-1.png" />
