@@ -15,6 +15,8 @@ Unlike it's predecessor [1], Rainmap-lite does not require special services (Rab
 * Easy to install/set up.
 * Share results with your team.
 
+This project is still in beta version. Any feedback, bug reports and PRs are greatly appreciated!
+
 ## Demo
 https://youtu.be/3oNegHPBd3o
 
