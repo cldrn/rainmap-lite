@@ -13,7 +13,7 @@ def validate_cmd(str):
 
 class NmapProfile(models.Model):
     alias_text = models.CharField(max_length=32)
-    args_text = models.CharField(max_length=1024)
+    args_text = models.CharField(max_length=1024, validators=[validate_cmd])
     pub_date = models.DateTimeField('date created')
     def __str__(self):
         return self.alias_text
