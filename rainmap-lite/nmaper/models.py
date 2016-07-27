@@ -21,7 +21,7 @@ class NmapProfile(models.Model):
 class NmapScan(models.Model):
     target_text = models.CharField(max_length=1024)
     cmd_text = models.CharField(max_length=256, validators=[validate_cmd])
-    email_text = models.EmailField(max_length=32)
+    email_text = models.EmailField(max_length=254)
     status_text = models.CharField(max_length=16, choices = SCAN_STATUS)
     start_date = models.DateTimeField('date started')
     end_date = models.DateTimeField('date end')
