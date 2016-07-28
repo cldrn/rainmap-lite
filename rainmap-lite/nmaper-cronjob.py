@@ -7,6 +7,7 @@ import smtplib
 import datetime
 import uuid
 import lxml.etree as ET
+import distutils.spawn
 
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
@@ -17,19 +18,16 @@ SMTP_PASS = "yourpassword"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 OUTPUT_PATH = os.path.normpath("%s/nmaper/static/results" % os.getcwd()).replace("\\", "/")
-NMAP_PATH = ('"%s"' % os.path.join("%s" % (os.environ['PROGRAMFILES(X86)']
-                                     if 'PROGRAMFILES(X86)' in os.environ
-                                     else os.environ['PROGRAMFILES']), "Nmap\\nmap.exe").replace("\\", "/")
-             if os.name == "nt" else "/usr/local/bin/nmap")
-
 
 def find_nmap():
-    for path in os.environ["PATH"].split(os.pathsep):
-        path = path.strip('"')
-        path = os.path.join(path, "nmap%s" %
-                            (".exe" if os.name == "nt" else ""))
-        if os.path.isfile(path) and os.access(path, os.X_OK):
-            return path
+    if os.name == "nt":
+        nmap_path = distutils.spawn.find_executable("nmap.exe", os.environ["PROGRAMFILES(X86)"]+"\Nmap")
+        if not(nmap_path):
+            nmap_path = distutils.spawn.find_executable("nmap.exe", os.environ["PROGRAMFILES"]+"\Nmap")
+    else:
+        nmap_path = distutils.spawn.find_executable("nmap")
+
+    return nmap_path
 
 def notify(id_, email, cmd):
     print('[%s] Sending report %s to %s' % (datetime.datetime.now(), id_, email))
@@ -79,13 +77,10 @@ def execute(path, cmd, uuid):
     print('[%s] HTML report generated (%s.html)' % (datetime.datetime.now(), filename))
 
 def main():
-    if not os.path.isfile(NMAP_PATH.replace("\"", "")):
-        path = find_nmap()
-        if not path:
-            print("[%s] Could not find path for nmap. Quitting!" % datetime.datetime.now())
-            exit()
-    else:
-        path = NMAP_PATH
+    path = find_nmap()
+    if not path:
+        print("[%s] Could not find path for nmap. Quitting!" % datetime.datetime.now())
+        exit()
 
     db = sqlite3.connect('scandere.sqlite3')
     cursor = db.cursor()
