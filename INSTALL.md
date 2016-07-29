@@ -10,7 +10,7 @@ Install it with `pip install lxml`
 ```
 git clone https://github.com/cldrn/rainmap-lite
 ```
-- Update BASE_URL, SMTP_USER, SMTP_PASS, SMTP_SERVER and SMTP_PORT in nmaper-cronjob.py with your base URL and SMTP credentials to receive email alerts. If your Nmap path is not /usr/local/bin/nmap, update this value accordingly. 
+- Update BASE_URL, SMTP_USER, SMTP_PASS, SMTP_SERVER and SMTP_PORT in nmaper-cronjob.py with your base URL and SMTP credentials to receive email alerts.  
 - Create the database schema 
 ```
 python manage.py migrate 
