@@ -28,6 +28,10 @@ def index(request):
                 new_scan.cmd_text = "%s %s" % (nmap_cmd.args_text, new_scan.target_text)
             else:
                 new_scan.cmd_text = "%s %s" % (request.POST['cmd_text'], new_scan.target_text)
+            if 'dns_check' in request.POST:
+                new_scan.cmd_text = "%s -n" % new_scan.cmd_text
+            if 'ping_check' in request.POST:
+                new_scan.cmd_text = "%s -Pn" % new_scan.cmd_text
             if new_scan.validate_opts(new_scan.cmd_text) and new_scan.target_text != "invalid":
                 context['popup_message'] = 'Your scan has been added to the queue!'
                 new_scan.save()

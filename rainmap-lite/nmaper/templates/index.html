@@ -64,7 +64,12 @@
     <textarea name="cmd_text" id="command" rows="5"></textarea>
     </div>
 </div>
-<ul class="actions">
+<div class="field">
+                <input id="dnsCheckbox" type="checkbox" name="dns_check" value="nodns" /><label for="dnsCheckbox">Disable DNS resolution</label>
+</div>
+<div class="field">
+<input id="pingCheckbox" type="checkbox" name="ping_check" value="noping" /><label for="pingCheckbox">Skip host discovery</label>
+     </div> <ul class="actions">
     <li>
     <input type="submit" class="special" value="Scan" />
     </li>
