@@ -25,7 +25,7 @@ def find_nmap():
         if not(nmap_path):
             nmap_path = distutils.spawn.find_executable("nmap.exe", os.environ["PROGRAMFILES"]+"\Nmap")
     else:
-        nmap_path = distutils.spawn.find_executable("nmap")
+        nmap_path = distutils.spawn.find_executable("nmap","/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin")
 
     return nmap_path
 
