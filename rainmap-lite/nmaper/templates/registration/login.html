@@ -41,7 +41,7 @@
 </p>
 {% endif %}
 
-<form action="{% url 'django.contrib.auth.views.login' %}" method="post" id="login-form">{% csrf_token %}
+<form action="{% url 'login' %}" method="post" id="login-form">{% csrf_token %}
   <div class="form-row">
     {{ form.username.errors }}
     {{ form.username.label_tag }} {{ form.username }}
