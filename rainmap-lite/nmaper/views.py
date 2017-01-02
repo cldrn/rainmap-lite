@@ -17,9 +17,6 @@ def index(request):
         f = ScanForm(request.POST)
         if f.is_valid():
             new_scan = f.save(commit=False)
-            if not new_scan.valid_target(new_scan.target_text):
-                context['popup_message'] = 'Invalid target!'
-                new_scan.target_text = "invalid"
             new_scan.status_text = "waiting"
             new_scan.start_date = timezone.now()
             new_scan.end_date = timezone.now()
@@ -32,11 +29,9 @@ def index(request):
                 new_scan.cmd_text = "%s -n" % new_scan.cmd_text
             if 'ping_check' in request.POST:
                 new_scan.cmd_text = "%s -Pn" % new_scan.cmd_text
-            if new_scan.validate_opts(new_scan.cmd_text) and new_scan.target_text != "invalid":
-                context['popup_message'] = 'Your scan has been added to the queue!'
-                new_scan.save()
-            else:
-                context['popup_message'] = 'Not a valid Nmap command!'
+                
+            context['popup_message'] = 'Your scan has been added to the database!'
+            new_scan.save()
         else:
             context['popup_message'] = f.errors
 

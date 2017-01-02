@@ -11,12 +11,16 @@ import distutils.spawn
 
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
+from NmapOptions import NmapOptions
 
+#<CONFIGURATION>
 BASE_URL = "http://127.0.0.1:8000"
 SMTP_USER = "youremail@gmail.com"
 SMTP_PASS = "yourpassword"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
+#</CONFIGURATION>
+
 OUTPUT_PATH = os.path.normpath("%s/nmaper/static/results" % os.getcwd()).replace("\\", "/")
 
 def find_nmap():
@@ -62,7 +66,10 @@ def set_endtime(id_, cursor, db):
 
 def execute(path, cmd, uuid):
     filename  = "%s/%s" % (OUTPUT_PATH, uuid)
-    proc = subprocess.Popen('%s %s -oA %s' % (path, cmd, filename), shell=True)
+    nmap_cmd = '%s %s -oA %s' % (path, cmd, filename)
+    ops = NmapOptions()
+    ops.parse_string(nmap_cmd)
+    proc = subprocess.Popen(ops.render(), shell=False)
     proc.wait()
 
     print('\n[%s] Finished execution of command "%s"' % (datetime.datetime.now(), cmd))
