@@ -25,7 +25,7 @@ Please check the [original project](https://github.com/cldrn/rainmap-lite) for m
 - LOG_PATH="/var/log/nmaper.log"
 - ADMIN_USER="admin"
 - ADMIN_PASS="admin"
-- ADMIN_EMAIL="freebooters@gmail"
+- ADMIN_EMAIL="freebooters@gmail.com"
 
 ### Config for namper-cronjob.py
 
