@@ -1,0 +1,4 @@
+Django==1.11.25
+lxml==4.4.1
+python-dotenv==0.10.3
+pytz==2019.2
