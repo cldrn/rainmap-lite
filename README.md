@@ -10,10 +10,11 @@ Please check the [original project](https://github.com/cldrn/rainmap-lite) for m
 
 ## Installation
 
-1. git clone https://github.com/ClarkChiu/rainmap-lite
-2. Prepare the environment file from .env.sample
-3. Rename/Copy the .env.sample to .env
-4. sh setup.sh
+1. Make sure the **<u>nmap</u>**, **<u>nmap-scripts</u>** and **<u>cron</u>** installed on system
+2. git clone https://github.com/ClarkChiu/rainmap-lite
+3. Prepare the environment file from .env.sample
+4. Rename/Copy the .env.sample to .env
+5. sh setup.sh
 
 ## Environment variables (.env.sample file)
 
