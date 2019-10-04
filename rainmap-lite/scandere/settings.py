@@ -25,7 +25,10 @@ SECRET_KEY = '(y8wl*cko@#9t-1alnz8w_4dssksqd#we0q2w0xw&w3erqdz(q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 LOGIN_REDIRECT_URL = '/'
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = [
+    os.getenv('BASE_URL').split(':')[1].replace('/', '')
+]
 
 
 # Application definition
